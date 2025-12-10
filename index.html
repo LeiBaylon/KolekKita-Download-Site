@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KolekKita - Connecting Residents and Junk Collectors for a Cleaner, Smarter Community">
+    <title>KolekKita - Smart Waste Collection Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyBykssYUD_2uixQLPpaFVLrEGuexfpFdoY",
+            authDomain: "kolekkita-9216f.firebaseapp.com",
+            projectId: "kolekkita-9216f",
+            storageBucket: "kolekkita-9216f.firebasestorage.app",
+            messagingSenderId: "309777304372",
+            appId: "1:309777304372:web:034a6813e78834339ef361",
+            measurementId: "G-7P8GF98WLE"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="KolekKita Logo" class="logo-icon">
+                <span class="logo-text">olekKita</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#app" class="nav-link">App</a></li>
+                <li><a href="#dashboard" class="nav-link">Admin Dashboard</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <span class="highlight">KolekKita</span></h1>
+                <h2 class="hero-subtitle">Connecting Residents, Junk Collectors, and Junk Shop Owners for a Cleaner, Smarter Community.</h2>
+                <p class="hero-description">
+                    KolekKita brings sustainable waste management to Batangas through seamless waste collection requests, 
+                    real-time communication, and transparent recycling processes.
+                </p>
+                <button class="cta-button">Get Started →</button>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About KolekKita</h2>
+                <p class="section-subtitle">Revolutionizing waste management in Batangas Province</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🏘️</div>
+                    <h3>Community-Driven</h3>
+                    <p>Empowering residents to actively participate in sustainable waste management practices within their communities.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">♻️</div>
+                    <h3>Sustainability Focus</h3>
+                    <p>Promoting recycling and proper waste disposal through transparent pricing and efficient collection systems.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Data-Driven Insights</h3>
+                    <p>Providing city and municipal offices with real-time waste management data for better decision-making.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Seamless Connection</h3>
+                    <p>Bridging the gap between residents, junk collectors, and junk shop owners for efficient, reliable service delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need for efficient waste collection</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Real-time Pickup Requests</h3>
+                    <p>Schedule waste collection instantly with verified junk collectors in your area.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Live Chat Communication</h3>
+                    <p>Direct messaging between residents and collectors for seamless coordination.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Real-time Notifications</h3>
+                    <p>Instant notifications for pickup requests, status updates, and collector arrivals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Clear, upfront pricing for all waste collection services with no hidden fees.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♻️</div>
+                    <h3>Recyclable Materials Tracking</h3>
+                    <p>Organized tracking and categorization of recyclable materials for efficient waste management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Admin Dashboard</h3>
+                    <p>Comprehensive management tools for city and municipal administrators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="app-section" id="app">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-info">
+                    <h2 class="section-title">Download the KolekKita App</h2>
+                    <p class="app-description">
+                        Experience hassle-free waste collection at your fingertips. Request pickups, 
+                        chat with collectors, and track your recycling impact—all in one app.
+                    </p>
+                    <div class="app-features-list">
+                        <div class="app-feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Easy pickup scheduling</span>
+                        </div>
+                        <div class="app-feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Real-time notifications</span>
+                        </div>
+                        <div class="app-feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Track your environmental impact</span>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://drive.usercontent.google.com/download?id=15eeOIjrywUmA_XPECDVwA0EKqxanh8GQ&export=download&authuser=0" download class="download-btn android">
+                            <span class="btn-icon">📱</span>
+                            <div>
+                                <small>Download</small>
+                                <strong>APK</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-content">
+                            <div class="app-screen">
+                                <div class="screen-header">
+                                    <div class="status-bar"></div>
+                                    <div class="screen-logo">
+                                        <img src="assets/6701436E-6E9F-466C-94E9-4C3027C4C0BC.png" alt="KolekKita Logo" class="screen-logo-icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard Section -->
+    <section class="dashboard-section" id="dashboard">
+        <div class="container">
+            <div class="dashboard-content">
+                <div class="dashboard-mockup">
+                    <img src="assets/AEA99BC3-8880-4CE0-A328-76520E8B9260.jpeg" alt="Admin Dashboard" class="dashboard-image">
+                </div>
+                <div class="dashboard-info">
+                    <h2 class="section-title">Admin Dashboard</h2>
+                    <p class="dashboard-description">
+                        Comprehensive management tools designed for city and municipal waste management offices to monitor and optimize waste collection operations.
+                    </p>
+                    <div class="dashboard-features-list">
+                        <div class="dashboard-feature-item">
+                            <span class="feature-number">01</span>
+                            <div>
+                                <h4>Real-time Monitoring</h4>
+                                <p>Track all collection activities across your city or municipality in real-time.</p>
+                            </div>
+                        </div>
+                        <div class="dashboard-feature-item">
+                            <span class="feature-number">02</span>
+                            <div>
+                                <h4>Analytics & Reports</h4>
+                                <p>Generate detailed reports on waste collection metrics and trends.</p>
+                            </div>
+                        </div>
+                        <div class="dashboard-feature-item">
+                            <span class="feature-number">03</span>
+                            <div>
+                                <h4>User Management</h4>
+                                <p>Manage residents, collectors, and verify new registrations.</p>
+                            </div>
+                        </div>
+                        <div class="dashboard-feature-item">
+                            <span class="feature-number">04</span>
+                            <div>
+                                <h4>Performance Insights</h4>
+                                <p>Monitor collector ratings and optimize service quality.</p>
+                            </div>
+                        </div>
+                        <div class="dashboard-feature-item">
+                            <span class="feature-number">05</span>
+                            <div>
+                                <h4>Real-time Notifications</h4>
+                                <p>Instant alerts for new requests, status updates, and system activities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@kolekkita.ph</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Batangas</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="KolekKita Logo" class="logo-icon">
+                        <span class="logo-text">KolekKita</span>
+                    </div>
+                    <p>Connecting communities for a cleaner tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#app">Mobile App</a>
+                        <a href="#dashboard">Dashboard</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KolekKita. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>KolekKita</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" id="modalOkBtn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
